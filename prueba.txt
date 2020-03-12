@@ -1,0 +1,13 @@
+function agregarHttp(url) {
+    return ("http://"+url)
+};
+
+function procesar( sitios , callback){
+    let resultado= [];
+    for ( i = 0 ; i < sitios.length ; i++ ){
+        let sitio = sitios[i];
+        resultado.push(callback(sitio)); 
+        };
+}
+let paginas = ["www.google.com","www.yahoo.com","www.ole.com"]
+console.log(procesar(paginas,agregarHttp));
